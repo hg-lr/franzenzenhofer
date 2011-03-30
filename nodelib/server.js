@@ -1,7 +1,7 @@
 var app = require('express').createServer();
 
 app.get('/', function(req, res){
-  res.render('./templates/index.jade');
+  res.render('index.jade');
 });
 
 app.listen(3000);
