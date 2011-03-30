@@ -1,7 +1,7 @@
 var app = require('express').createServer();
 
 app.get('/', function(req, res){
-  res.send('franz enzenhofer');
+  res.render('./templates/index.jade');
 });
 
 app.listen(3000);
