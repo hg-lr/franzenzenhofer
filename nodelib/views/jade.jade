@@ -1,0 +1,92 @@
+h1  a short introduction to jade
+h2 
+  a(href='http://jade-lang.com/',target='_blank') jade
+  |  is a 
+  a(href='http://en.wikipedia.org/wiki/Template_engine_(web)',target='_blank') template engine
+  |  for 
+  a(href='http://nodejs.org/', target='_blank') node.js
+  |  and the default rendering engine for the 
+  a(href='http://expressjs.com/guide.html', target='_blank') express
+  |  web framework. 
+  
+h3 simple jade how-to
+div
+  ol
+    li change your texteditor of choice to use 2 spaces for tabs (!)
+    li 
+      span.command npm install express
+    li 
+      span.commandnpm install jade
+    li 
+      span.command cd /to/your/working/directory
+    li 
+      span.command mkdir views
+    li create a file 
+      span.filename views/layout.jade
+      pre.
+          !!! 5
+            html(lang='en')
+              head
+              title= title
+              body!= body
+                div#navigation!= partial('navigation.jade')
+      ul
+        li  jade uses text intend (2 spaces) to determine where an HTML element belongs in the DOM
+        li  
+          i !!! 5
+          |  -> use the HTML 5 doctype declaration
+        li  
+          i html(lang='en')
+          |  -> the dom element html has the attribute language set to 'en'
+        li  
+          i title= title
+          |  -> the dom element titel has the text node set to the (=) escaped  value of the variable 'title'
+        li  
+          i body!= body
+          |  -> render into the body dom element the (!=) un-escaped  value of the variable 'body'
+        li  
+          i div#navigation!= partial('navigation.jade')
+          |  -> render the jade template views/navigation.jade (a partial) into the div dom element with the id 'navigation'
+        br
+    li create a file 
+      span.filename views/index.jade
+      pre.
+        h1 
+          a(href='http://www.franz-enzenhofer.com/') Franz Enzenhofer
+    li create a file 
+      span.filename views/navigation.jade
+      pre.
+        div#navigation
+          a(href='/') home
+          
+    li glueing it together - create a file 
+      span.filename server.js
+      pre.
+        //create an app server
+        var app = require('express').createServer();
+        //set path to the views (template) directory
+        app.set('views', __dirname + '/views');
+        app.get('/', function(req, res){res.render('index.jade', {title: 'Franz Enzenhofer'});});
+        //listen on localhost:3000
+        app.listen(3000);
+      li node server.js
+      li visit 
+        a(href='http://127.0.0.1:3000/', target='_blank') http://127.0.0.1:3000/
+      li understand the magic
+        ul
+          li the object passed as second arguement to the res.render function is a global variable in the rendered templates and partials.
+          li the rendered output of the passed template (in this case index.jade) is available as the 'body' variable in the layout.json
+h3 further reading
+ul
+  li
+    a(href='https://github.com/visionmedia/express/tree/master/examples/jade') express jade samples on github
+  li
+    a(href='http://expressjs.com/guide.html') express framework guide 
+  li
+    a(href='https://github.com/visionmedia/jade/blob/master/Readme.md') jade readme on github
+  li
+    a(href='http://dailyjs.com/2010/11/22/node-tutorial-4/') jade used in a sample app
+  
+
+  
+  

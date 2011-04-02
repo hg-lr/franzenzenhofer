@@ -16,6 +16,8 @@ GET '/user/:id', ^(req, res, next) {
   res.endJSON { name: 'John Doe', id: req.params.id }
 }
 
+
+
 # -----------------------------------------------------------------------------
 # Setup and start the server
 parse_url = require('url').parse

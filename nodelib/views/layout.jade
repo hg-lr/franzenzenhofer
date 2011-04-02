@@ -1,6 +1,9 @@
 !!! 5
-html(lang="en")
+html(lang='en')
   head
-    title Franz Enzenhofer
-  body
-    div!= body
+    title= title
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    style
+     #navigation {text-transform:capitalize}
+  body!= body
+    div#navigation!= partial('navigation.jade') 
