@@ -1,7 +1,9 @@
 ## Access over HTTP (but not HTTPS)
-if ($host = 'franz-enzenhofer.com' ) {
-    rewrite  ^/(.*)$  http://www.franz-enzenhofer.com/$1  permanent;
-}
+  server {
+    listen 80;
+    server_name www.franz-enzenhofer.com;
+    rewrite ^ http://franz-enzenhofer.com$uri permanent;
+  }
 
 server {
   listen        80;
