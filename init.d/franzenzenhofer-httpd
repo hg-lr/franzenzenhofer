@@ -40,7 +40,7 @@ PIDFILE="$SUPERVISOR_PIDDIR/$NAME.pid"
 # ----- end of configuration -----
 
 # Exit if the package is not available
-test -f "$MOVE_SCRIPT" || exit 0
+#test -f "$MOVE_SCRIPT" || exit 0
 
 # Read configuration variable file if it is present
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
@@ -78,8 +78,8 @@ do_start() {
                       --name=$NAME --pidfile=$PIDFILE \
                       --stdout=$LOGDIR/$NAME.log \
                       --stderr=$LOGDIR/$NAME.log \
-                      --errlog=$LOGDIR/$NAME.err \
-                      -- "$MOVE_PROGRAM" $MOVE_ARGS
+                      --errlog=$LOGDIR/$NAME.err 
+                     # -- "$MOVE_PROGRAM" $MOVE_ARGS
     STATUS="$?"
   else
     STATUS=2
