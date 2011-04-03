@@ -35,6 +35,8 @@ var n = [
 
 //start page
 app.get('/', function(req, res){res.render('index.jade', {title: 'Franz Enzenhofer SEO', description:null, navigation: n});});
+app.get('/index.html', function(req, res){res.render('index.jade', {title: 'Franz Enzenhofer SEO', description:null, navigation: n});});
+
 
 //articles
 
