@@ -25,7 +25,7 @@ var n = [
   title: 'about',
   href: false,
   navpoints: [
-     {title:'curriculum vitae', href:'cv'},
+     {title:'curriculum vitae',  href:'cv'},
   ]
  },
 ]
@@ -34,13 +34,13 @@ var n = [
 
 
 //start page
-app.get('/', function(req, res){res.render('index.jade', {title: 'Franz Enzenhofer SEO', navigation: n});});
+app.get('/', function(req, res){res.render('index.jade', {title: 'Franz Enzenhofer SEO', description:null, navigation: n});});
 
 //articles
 
 //jade
-app.get('/jade', function(req, res){res.render('jade.jade', {title: 'jade tutorial', navigation: n});});
-app.get('/cv', function(req, res){res.render('cv.jade', {title: 'Franz Enzenhofer Curriculum Vitae', navigation: n});});
+app.get('/jade', function(req, res){res.render('jade.jade', {title: 'jade tutorial', description:null, navigation: n});});
+app.get('/cv', function(req, res){res.render('cv.jade', {title: 'Franz Enzenhofer Curriculum Vitae', description:null, navigation: n});});
 
 /*app.get('/img/*', function(req, res){
 
