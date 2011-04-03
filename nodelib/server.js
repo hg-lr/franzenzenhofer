@@ -7,15 +7,7 @@ app.set('view engine', 'jade');
 
 var n = [
  {
-  title: 'seo',
-  href: false,
-  navpoints: [
-    {title:'link liquidity crisis', href:'http://eu.techcrunch.com/2010/07/07/startups-linking-to-your-competition-will-help-you-no-really/'},
-    {title:'lli', href:'llI'}
-  ]
- },
- {
-  title: 'javascript / node.js',
+  title: 'javascript / nodeJS',
   href: false,
   navpoints: [
      {title:'jade', href:'jade'},
@@ -28,6 +20,14 @@ var n = [
      {title:'curriculum vitae',  href:'cv'},
   ]
  },
+ {
+  title: 'articles',
+  href: false,
+  navpoints: [
+    {title:'link liquidity crisis', href:'http://eu.techcrunch.com/2010/07/07/startups-linking-to-your-competition-will-help-you-no-really/'},
+    
+  ]
+ }
 ]
 
 

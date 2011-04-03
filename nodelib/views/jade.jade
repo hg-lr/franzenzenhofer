@@ -1,4 +1,6 @@
+script(src="/js/prettify.js",type="text/javascript")
 h1  a short introduction to jade
+br
 h2 
   a(href='http://jade-lang.com/',target='_blank') jade
   |  is a 
@@ -8,22 +10,22 @@ h2
   |  and the default rendering engine for the 
   a(href='http://expressjs.com/guide.html', target='_blank') express
   |  web framework. 
-  
+br 
 h3 simple jade how-to
 div
   ol
     li change your texteditor of choice to use 2 spaces for tabs (!)
     li 
-      span.command npm install express
+      code.prettyprint npm install express
     li 
-      span.commandnpm install jade
+      code.prettyprint npm install jade
     li 
-      span.command cd /to/your/working/directory
+      code.prettyprint cd /to/your/working/directory
     li 
-      span.command mkdir views
+      code.prettyprint mkdir views
     li create a file 
-      span.filename views/layout.jade
-      pre.
+      code.prettyprint views/layout.jade
+      pre.prettyprint.
           !!! 5
             html(lang='en')
               head
@@ -33,43 +35,46 @@ div
       ul
         li  jade uses text intend (2 spaces) to determine where an HTML element belongs in the DOM
         li  
-          i !!! 5
+          code.prettyprint !!! 5
           |  -> use the HTML 5 doctype declaration
         li  
-          i html(lang='en')
+          code.prettyprint html(lang='en')
           |  -> the dom element html has the attribute language set to 'en'
         li  
-          i title= title
+          code.prettyprint title= title
           |  -> the dom element titel has the text node set to the (=) escaped  value of the variable 'title'
         li  
-          i body!= body
+          code.prettyprint body!= body
           |  -> render into the body dom element the (!=) un-escaped  value of the variable 'body'
         li  
-          i div#navigation!= partial('navigation.jade')
+          code.prettyprint div#navigation!= partial('navigation.jade')
           |  -> render the jade template views/navigation.jade (a partial) into the div dom element with the id 'navigation'
         br
     li create a file 
-      span.filename views/index.jade
-      pre.
+      code.prettyprint views/index.jade
+      pre.prettyprint.
         h1 
           a(href='http://www.franz-enzenhofer.com/') Franz Enzenhofer
     li create a file 
-      span.filename views/navigation.jade
-      pre.
+      code.prettyprint views/navigation.jade
+      pre.prettyprint.
         div#navigation
           a(href='/') home
-          
     li glueing it together - create a file 
-      span.filename server.js
-      pre.
+      code.prettyprint server.js
+      pre.prettyprint.
         //create an app server
         var app = require('express').createServer();
         //set path to the views (template) directory
         app.set('views', __dirname + '/views');
+        //set path to static files
+        app.use(express.static(__dirname + '/../public'));
+        //handle GET requests on /
         app.get('/', function(req, res){res.render('index.jade', {title: 'Franz Enzenhofer'});});
         //listen on localhost:3000
         app.listen(3000);
-      li node server.js
+      li 
+        code.prettyprint node server.js
       li visit 
         a(href='http://127.0.0.1:3000/', target='_blank') http://127.0.0.1:3000/
       li understand the magic
