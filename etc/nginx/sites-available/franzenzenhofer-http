@@ -1,5 +1,5 @@
 ## Access over HTTP (but not HTTPS)
-
+server { listen 80; server_name franz-enzenhofer.com; rewrite ^/(.*) http://oftengloomy.com permanent; }
 
 server {
   listen        80;
