@@ -1,8 +1,8 @@
 ## Access over HTTP (but not HTTPS)
 server {
   listen 80;
-  server_name example.com;
-  rewrite ^/(.*) http://www.example.com/$1 permanent;
+  server_name franz-enzenhofer.com;
+  rewrite ^/(.*) http://www.franz-enzenhofer.com/$1 permanent;
 }
 
 server {
