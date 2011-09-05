@@ -71,8 +71,8 @@ button {  width: auto; overflow: visible; }
 
 body, select, input, textarea { color: #444; }
 h1, h2, h3, h4, h5, h6 { font-weight: bold; }
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
+a, a:active, a:visited { color: #2200CC; }
+a:hover { color: #2200CC; }
 
 
 /**
@@ -145,6 +145,10 @@ body {
   /*width: 640px;*/
 }
 
+h1 { font-family: 'Tangerine', cursive; font-size:5em;  margin: 0.5em; }
+h2 { font-family: 'Tangerine', cursive; font-size:2.5em; margin-top:0.5em; margin-bottom:0.2em;  }
+h3 { font-family: 'Tangerine', cursive; font-size:3.5em; margin-top:0.5em; margin-bottom:0.2em; }
+
 #main
 {
   margin: 10px;
@@ -185,6 +189,7 @@ div#navigation
   width:100%;
   overflow:hidden;
 }
+
 
 
 /* Pretty printing styles. Used with prettify.js. */
