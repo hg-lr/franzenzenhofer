@@ -51,10 +51,11 @@ var n = [
      
   ]
  },
- {
+ { 
   title: 'Tools',
   href: false,
   navpoints: [
+     {title:'robots.txt checker', href:'http://www.franz-enzenhofer.com/robotstxt'},
      {title:'depersonalizer', href:'http://www.facesaerch.com/depersonalizer/'},
      {title:'nofollow bookmarklet', href:'http://www.facesaerch.com/blog/nofollow-bookmarklet/'},
      {title:'Farbzauber Chrome App', href:'https://chrome.google.com/webstore/detail/ednbfblokipkbkecmfinlfhcikhidnoc'}
