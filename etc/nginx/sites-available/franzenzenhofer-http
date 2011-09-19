@@ -10,6 +10,12 @@ server {
   listen        80;
   listen        [::]:80 default ipv6only=on;
   access_log    /var/log/nginx/access.log;
+  
+  location /robotstxt {
+  proxy_pass        http://stark-water-7372.herokuapp.com:80;
+  proxy_set_header  X-Real-IP  $remote_addr;
+  }
+  
   location / {
     root        /var/franzenzenhofer/public;
     index       index.html;
@@ -17,10 +23,7 @@ server {
     error_page  403 = @backend;
   }
   
-  location /robotstxt {
-  proxy_pass        http://stark-water-7372.herokuapp.com:80;
-  proxy_set_header  X-Real-IP  $remote_addr;
-  }
+  
   
   location @backend {
     proxy_set_header X-Real-IP $remote_addr;
