@@ -45,7 +45,7 @@ var n = [
   title: 'Demos',
   href: false,
   navpoints: [
-     {title:'the bananan project', href:'http://www.facesaerch.com/banana.html'},
+     {title:'the banana project', href:'http://www.facesaerch.com/banana.html'},
      {title:'html5 video', href:'http://www.barbafan.de/html5video?video=tron'},
      {title:'farbzauber', href:'http://www.barbafan.de/farbzauber/w'},
      
