@@ -11,7 +11,7 @@ server {
   listen        [::]:80 default ipv6only=on;
   access_log    /var/log/nginx/access.log;
   
-  location /robotstxt/ {
+  location /robotstxt {
   proxy_pass http://stark-water-7372.herokuapp.com/;
   proxy_set_header X-Real-IP $remote_addr;
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
