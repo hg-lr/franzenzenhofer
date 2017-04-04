@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'tangerinebold';
+  src: url('assets/fonts/tangerine_bold-webfont.woff2') format('woff2'),
+       url('assets/fonts/tangerine_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fonts-loaded h1, 
+.fonts-loaded h2, 
+.fonts-loaded h3 {
+  font-family: 'tangerinebold', cursive;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  font: 16px/1.4 georgia serif;
+  background: #fff; 
+  color: #222;
+  width: 90%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+blockquote,
+figure,
+{
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a, 
+button {
+  color: inherit;
+  transition: .3s;
+}
+
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+::-moz-selection { 
+  background: #FF5E99; color:#fff; text-shadow: none; 
+}
+
+::selection { 
+  background:#FF5E99; color:#fff; text-shadow: none; 
+}
+
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+a,
+a:hover 
+a:active, 
+a:visited { 
+  color: #2200CC; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: cursive;
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem; 
+}
+
+h4 {
+  font-size: 2rem; 
+  margin: 1rem 0;
+}
+
+h5 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+* + h2,
+* + h3 {
+  margin-top: 2rem;
+}
+
+.content,
+.navigation,
+header {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+header {
+  font-size: 1rem;
+}
+
+.content {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.navigation {
+  text-transform: capitalize;
+  overflow: hidden;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
